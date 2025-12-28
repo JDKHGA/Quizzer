@@ -4,7 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_mail import Mail
 
-app = Flask(__name__)
+# Explicitly set the template folder to 'Templates' (case-sensitive)
+app = Flask(__name__, template_folder='Templates')
 
 secret_key = os.urandom(24)
 app.config['SECRET_KEY'] = secret_key
